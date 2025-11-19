@@ -67,5 +67,29 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // Launch a simple confetti animation on the confirmation page
+    function launchConfetti() {
+        const container = document.getElementById('confetti-container');
+        if (!container) return;
+
+        const colors = ['#FFC107', '#FF5722', '#4CAF50', '#2196F3', '#9C27B0'];
+        for (let i = 0; i < 30; i++) {
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+            confetti.style.left = Math.random() * 100 + '%';
+            confetti.style.animationDelay = (Math.random() * 0.7) + 's';
+            container.appendChild(confetti);
+
+            // Remove confetti after it falls
+            setTimeout(() => container.removeChild(confetti), 3000);
+        }
+    }
+
+    // If confirmation page is active (has confetti container) trigger animation
+    if (document.getElementById('confetti-container')) {
+        setTimeout(launchConfetti, 200); // give a short delay for effect
+    }
 });
 

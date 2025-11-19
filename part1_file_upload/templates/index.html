@@ -9,8 +9,9 @@
 <body>
     <div class="container">
         <header>
-            <h1>📁 File Upload Portal</h1>
-            <p class="subtitle">Upload and manage your files</p>
+            <h1>📁 File Upload Portal — Your Friendly Digital Archivist</h1>
+            <p class="subtitle">Upload, tag, and treasure your files — safely and playfully.</p>
+            <p class="tagline">Tip: Add a helpful description so future you will thank you.</p>
         </header>
 
         <nav class="nav-links">
@@ -20,7 +21,7 @@
 
         <div class="upload-section">
             <div class="upload-card">
-                <h2>Upload a File</h2>
+                <h2>Upload a File — Make it Memorable ✨</h2>
                 <p class="info-text">Supported formats: .log, .pdf, .csv, .zip</p>
                 
                 <form action="{{ url_for('upload_file') }}" method="POST" enctype="multipart/form-data" id="uploadForm">
@@ -49,6 +50,7 @@
                         <button type="submit" class="btn-primary">Upload File</button>
                         <button type="reset" class="btn-secondary">Clear Form</button>
                     </div>
+                    <div class="micro-hint">We accept .log, .pdf, .csv, .zip — max 16MB. Try uploading a file to see magic!</div>
                 </form>
             </div>
         </div>
