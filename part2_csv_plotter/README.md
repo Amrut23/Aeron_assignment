@@ -45,3 +45,5 @@ This is a Python application that reads data from a CSV file and generates plots
 
 ## License
 This project is for educational purposes and is not licensed for commercial use.
+
+Additional tools used: **Copilot** (within VS Code and GitHub) assisted with code authoring and suggestions; the base project structure was designed using **Claude** and **Gemini**.

@@ -175,11 +175,9 @@ The File Upload Portal requires no additional setup. Files are stored locally in
 
 ## AI Tools Used
 
-### Primary AI Tool: Cursor AI (Auto)
+### Primary AI Tools: Copilot (VS Code) and GitHub Copilot
 
-This entire project was built using **Cursor AI** (Auto), an AI-powered coding assistant. The development process involved iterative prompting and refinement.
-
-Additional tools used: **Copilot** (within VS Code and GitHub) assisted with code authoring and suggestions; the base project structure was designed using **Claude** and **Gemini**.
+This project used **Copilot (within VS Code)** and **GitHub Copilot** to assist with code authoring and suggestions. The base project structure was designed using **Claude** and **Gemini**.
 
 ### AI Prompts Used
 

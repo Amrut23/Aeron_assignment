@@ -65,3 +65,5 @@ Tips: Metadata is stored in `metadata.json` so you can open it or export it for 
 
 ## License
 This project is for educational purposes and is not licensed for commercial use.
+
+Additional tools used: **Copilot** (within VS Code and GitHub) assisted with code authoring and suggestions; the base project structure was designed using **Claude** and **Gemini**.
