@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Confirmation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✅ Upload Successful!</h1>
+            <p class="subtitle">Your file has been uploaded successfully</p>
+        </header>
+
+        <nav class="nav-links">
+            <a href="{{ url_for('index') }}" class="nav-link">Upload Another File</a>
+            <a href="{{ url_for('list_files') }}" class="nav-link">View All Files</a>
+        </nav>
+
+        <div class="confirmation-section">
+            <div class="confirmation-card">
+                <div class="success-icon">✓</div>
+                <h2>File Uploaded Successfully</h2>
+                
+                <div class="file-details">
+                    <div class="detail-row">
+                        <span class="detail-label">File Name:</span>
+                        <span class="detail-value">{{ file_info.original_filename }}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">File Type:</span>
+                        <span class="detail-value">{{ file_info.file_type.upper() }}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">File Size:</span>
+                        <span class="detail-value">{{ "%.2f"|format(file_info.file_size / 1024) }} KB</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Log Date/Time:</span>
+                        <span class="detail-value">{{ file_info.log_datetime }}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Description:</span>
+                        <span class="detail-value">{{ file_info.description or 'N/A' }}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Uploaded By:</span>
+                        <span class="detail-value">{{ file_info.uploader_name }}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Upload Time:</span>
+                        <span class="detail-value">{{ file_info.upload_timestamp[:19] }}</span>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <a href="{{ url_for('list_files') }}" class="btn-primary">View All Files</a>
+                    <a href="{{ url_for('index') }}" class="btn-secondary">Upload Another File</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

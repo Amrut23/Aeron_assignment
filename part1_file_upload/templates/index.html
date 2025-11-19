@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📁 File Upload Portal</h1>
+            <p class="subtitle">Upload and manage your files</p>
+        </header>
+
+        <nav class="nav-links">
+            <a href="{{ url_for('index') }}" class="nav-link active">Upload File</a>
+            <a href="{{ url_for('list_files') }}" class="nav-link">View All Files</a>
+        </nav>
+
+        <div class="upload-section">
+            <div class="upload-card">
+                <h2>Upload a File</h2>
+                <p class="info-text">Supported formats: .log, .pdf, .csv, .zip</p>
+                
+                <form action="{{ url_for('upload_file') }}" method="POST" enctype="multipart/form-data" id="uploadForm">
+                    <div class="form-group">
+                        <label for="file">Select File *</label>
+                        <input type="file" id="file" name="file" accept=".log,.pdf,.csv,.zip" required>
+                        <small class="file-info" id="fileInfo">No file selected</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="log_datetime">Log Date/Time *</label>
+                        <input type="datetime-local" id="log_datetime" name="log_datetime" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description" rows="4" placeholder="Enter file description (optional)"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="uploader_name">Uploader Name *</label>
+                        <input type="text" id="uploader_name" name="uploader_name" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Upload File</button>
+                        <button type="reset" class="btn-secondary">Clear Form</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
