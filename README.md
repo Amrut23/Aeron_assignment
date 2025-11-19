@@ -179,6 +179,8 @@ The File Upload Portal requires no additional setup. Files are stored locally in
 
 This entire project was built using **Cursor AI** (Auto), an AI-powered coding assistant. The development process involved iterative prompting and refinement.
 
+Additional tools used: **Copilot** (within VS Code and GitHub) assisted with code authoring and suggestions; the base project structure was designed using **Claude** and **Gemini**.
+
 ### AI Prompts Used
 
 #### Initial Setup Prompt:
