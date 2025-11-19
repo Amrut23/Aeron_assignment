@@ -113,13 +113,3 @@ No API keys or external services are required to run the included code.
 
 ---
 
-## License
-
-This project is created for educational purposes as part of the AI Intern Assignment.
-
----
-
-## Contact
-
-If you need wording changes, examples, or screenshots added, tell me what you'd like included and I will update the file.
-
